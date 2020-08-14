@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* 제목 설정  */
+h1 {background-color: #00a ;
+padding: 0.5em 1em;
+margin: 4em 0;
+color: #fff;
+}
+
+/* 배경영역 지정을 위해  */
+body {border: 1px solid red;	
+margin: 0;  /* body태그도 기본 여백이 있음 */
+background-image:url("../img/contact.jpg");/* 배경이미지는 기본 반복 속성을 지님 */
+background-repeat: no-repeat; /* x: 가로축반복 y:세로축 반복*/
+background-position: center center;/*[속성] [속성] 지정 */
+				/* center center (==50% 50%) */
+background-size: 50% 50%;
+/*cover: 사진이 body태그를 벗어나서 무조건 채움(보통 많이 사용)
+  contain: 공백이 생김 */
+background-attachment: fixed; /*스크롤에 영향받지 않음*/
+
+}
+
+/* ul전체의 모양 변경 */
+/*목록앞의 모양을 이미지로 바꾸는 2가지 방법*/
+ul {list-style: url("../img/gif/yellowup.gif");
+/* 방법1. 목록의 모양을 지정하는 속성 - 이미지 경로 지정하기 */
+}
+
+ol>li {
+/* 방법2. 각 목록마다 배경이미지로 처리해서 ...  */
+list-style: none; /* i.목록앞의 기본모양을 제거  */
+background-image: url("../img/gif/colorpicker.gif");/*ii.배경이미지를 지정*/ 
+background-repeat: no-repeat; /*iii.배경이미지가 하나만 나오게*/
+background-size: 10px 10px;/*iv.배경이미지의 크기를 목록 모양처럼 알맞게 조절*/
+background-position: left 11px;/*v.배경이미지의 위치를 가로 세로 방향 각각 조절*/
+padding-left: 15px; /*vi.배경이미지와 겹친 글자를 우측으로 이동*/
+}
+	 
+}
+
+ul, ol {
+line-height: 1.8; /* 위아래 줄간격  */
+margin-bottom: 1.5em; /* 아래쪽 마진 추가 */	
+	
+}
+
+/* 각 항목이 잘 보일 수 있도록 구분*/
+ul>li {color: #00a;
+font-weight: bold;
+font-size: 1.2em;}
+
+/* 자식 목록은 노말폰트로 */
+ol>li {color: #000;
+font-weight: normal;
+font-size: 0.8em;}
+
+
+
+/* background-attachment */
+/*부모영역 설정 */
+section {border: 4px dashed #ccc;
+	margin: 3.5em 1em;
+	padding: 1em;
+}
+
+section>h2 {
+border-bottom: 4px double #ccc;
+color: #337;
+}
+
+/* background-attachment */
+/* 자식 영역 공통속성 지정 */
+
+.att-txt{
+background-color: #005;
+color: #fff;
+white-space: pre;
+width: 500px;	
+float: right; /*띄워서 우측으로 배치*/
+}
+
+
+.attp {border: 1px solid;
+margin: 3em 1em;
+padding: 1em;
+line-height: 1.8;
+color: #fff;
+width: 500px; height: 300px;
+overflow: auto; /*영역밖의 넘치는 내용이 있으면
+스크롤바 생성  */
+background-image: url("../img/thunder.jpg");}
+
+
+/* p영역 첫줄만 작업  */
+.attp:first-line {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #0a3;
+}
+
+.att01 {background-attachment: scroll;}
+.att02 {background-attachment: fixed;}
+.att03 {background-attachment: local;}
+
+
+
+
+
+
+
+
+
+

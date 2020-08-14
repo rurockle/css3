@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+
+.p-box{
+background-color: #261201;
+/*https://color.adobe.com/에서 이미지 안의 색상 추출*/
+width: 700px; /*이미지 크기 참조하여 설정  */
+margin: 20px;
+padding: 1em;
+box-sizing: border-box; /*padding 포함하여 예쁘게 설정*/
+float: left; /*나란히 배치*/
+
+text-align: center; /*자기 영역안의 속성 가운데정렬*/
+line-height: 1.8; /*줄간격*/
+color: #D2D907; 
+font-size: 2em;/*글자 크기*/
+font-weight: bold;/*글자 두께*/
+}
+
+/*float의 영향을 끊어주는 속성*/
+.clear{clear: both;} 
+
+
+/*border-radius */
+.brdr01 {border-radius: 50px;} /*모서리깎임*/
+.brdr02 {border-radius: 50px 0;} /*11시, 5시깎임  */
+.brdr03 {border-radius: 0 50px;} /*1시, 7시깎임 */
+.brdr04 {border-radius: 0 30px 60px 90px;} /*11시부터 시계방향 많이 깎음*/
+.brdr05 {border-radius: 50%;
+overflow: hidden;}
+
+/*opacity: 투명도 0~1까지 */
+/*모든 요소가 다 투명해짐  */
+.p-box:hover{opacity: 1;
+transition: 0.7s;}
+.opa01 {opacity: 0.1;}
+.opa02 {opacity: 0.3;}
+.opa03 {opacity: 0.6;}
+.opa04 {opacity: 0.9;}
+
+
+/* 색상의 투명도 */
+
+.al01, .al02, .al03 {
+	border: 10px solid;
+	background-color: #000;
+	background-image: url("../img/landscape.jpg");
+	background-size: cover; /*배경 꽉 채우기*/
+	padding: 1em;
+	font-size: 3em;
+	font-weight: bold;}
+
+.al01 {color: rgba(255,255,255,0.2);}
+.al02 {color: rgba(255,255,255,0.5);}
+.al03 {color: rgba(255,255,255,0.8);}
+
+pre {font-size: 20px;
+font-family: "맑은고딕",sans-serif;}
+

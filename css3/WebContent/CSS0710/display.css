@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+pre{
+	padding: 1em 0 1em 1.5em;
+	margin : 5em auto;
+	background-color : #408080;
+	border : dotted #1d3838 3px;
+	width : 550px;
+	font-size: 1.2em;
+	font-family: "맑은고딕", sans-serif;
+}
+
+pre:hover>b{
+	display: unset;
+}
+
+pre>b{
+	color : #723d78;
+	display: none;
+}
+
+
+
+
+nav li{/*>넣으면 적용이 안된다 / 직접자식과 직접자식 아닌경우의 차이 */
+/*A B
+  A > B : 한단계 아래만 가능함. 지금 여기서 한단계 아래면 nav>ul이어야함
+*/
+	border: 1px solid;
+	display: inline-block;/*inline은 크기조절 안되게함*//*inline-block주면 block속성까지 가지기 때문에 크기조정 가능*/
+	margin-right : 50px;
+	width: 20%;
+	height: 30px;
+	padding: 10px 30px;
+	/*그냥 한줄에 나란히 오게 하고싶으면 inline*/
+}
+
+/*nav>ul>li>a 로 해도됨*/
+nav a {
+	border: 1px solid;
+/* 	padding: 10px 30px; */
+	width: 100%;
+	 /*부모의 여박 padding값이 있어서 100%해도 꽉 차지 않음*/
+	height: 30px;
+	display: block;
+}
+
+
+.sub{display: none;}
+
+.mn01:hover>.sub {
+	display: block;
+}
+/* inline요소*/
+#sec01>*:not(h2){
+border: 1px solid;	
+width: 200px; 
+height: 50px;
+margin: 30px;
+}
+/* 부정선택자 not #sec01>*:not(h2) <= h2만 빠진다 */
+#sec01:hover>*:not(h2) {
+	display: block;
+}
+
+/* block 속성은 크기적용이 됨 */
+#sec02>*:not(h2) {border: 1px solid;
+width: 250px; height: 50px;
+margin: 30px;}
+
+/*마우스 올렸을 때, 모든 자식, h2만 빼고  */
+#sec02:hover>*:not(h2){
+	display: inline;
+}
+
+
+/*inline-block 속성  */
+
+#sec03>*:not(h2) {border: 1px solid rgba(0,0,255,0.6);
+width: 200px; height: 30px;
+margin: 20px; /* margin은 위아래 마진 미적용 */
+display: inline-block;} /* 동일한 모양으로 변함 */
+ 
+/* display:none; 사라지게 함  */
+
+table, th, td {
+	border: 1px solid;
+}
+
+
+
+.dis-none {display: none;}
+
+/* nth-of-type(): 같은 요소 여러번 반복 시, 순서로 요소 지정 */
+/* 두번째 tr에서 첫번째 td */
+table tr:nth-of-type(2):hover>td:nth-of-type(1) {
+	display: none;
+}
+
+
+#sec04:hover>b.dis-none {
+	display: inline;
+}
+
+.vis-hid {
+/* 역시 사라지지만 자리가 그대로 남음(레이아웃 변화 없음) */
+visibility: hidden;} 
+
+#sec04:hover>b.vis-hid {
+visibility: visible;
+	
+}
+
+
+
+
+
+
+
+

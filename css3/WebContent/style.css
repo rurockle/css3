@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* 제목 설정  */
+h1 {background-color: #37a ;
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #fff;
+}
+
+
+
+ul, ol {
+line-height: 1.8; /* 위아래 줄간격  */
+margin-bottom: 1.5em; /* 아래쪽 마진 추가 */	
+	
+}
+
+
+/* background-attachment */
+/*부모영역 설정 */
+section {border: 4px solid #ccc;
+	margin: 3.5em 1em;
+	padding: 1em;
+}
+
+section>h2 {
+border-bottom: 6px double #ccc;
+padding-bottom: 0.2em;
+color: #337;
+}
+
+
+section>h3 {
+border-bottom: 6px double #ccc;
+padding-bottom: 0.2em;
+color: #449;
+}
+
+
+.pre {
+background-color: #ccc;/*회색*/
+margin: 1.5em 0;	
+white-space: pre;
+line-height: 1.8;
+}

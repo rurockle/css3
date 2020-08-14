@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+
+/* text-shadow  */
+
+#sec01>p {
+font-size: 50px;
+font-weight: bold;
+color: #666;
+}
+
+
+.t-sha01 {
+text-shadow: 3px 5px 3px #000;}
+
+.t-sha02 {/* 입체감이 느껴짐 */
+text-shadow: 5px 0 0 #04a;	
+}
+.t-sha03 {
+text-shadow: 0 -10px 0 #04a; /* 음수(-)는 위로 | 양수는 내려감  */
+}
+.t-sha04 {
+text-shadow: 0 0  5px #04a;
+}
+
+/* 양각 서서히 나타나는 효과 */
+.t-sha05 { color: #fff !important;}
+.t-sha05:hover {color: #fff !important; /* 우선순위 우선 !important  */
+text-shadow:  -2px -3px 5px #000; /* 양각효과  */
+transition: 2s ease-in; /* 서서히 나타나는 효과  */
+}
+
+
+/* 발광효과 */
+.t-sha06 {
+background-color: #000;
+color: #000 !important;
+}
+.t-sha06:hover {
+text-shadow: 0 0 8px #9fe, 0 0 14px #f90, 3px -8px 16px #58f;	
+transition: 2s ease-in;
+}
+
+
+/* box-shadow  */
+
+#sec02>p {
+width: 600px; height: 80px;
+margin: 50px auto;  /* 위아래 50px 좌우 auto(수평) : 가운데  */
+padding: 10px;
+}
+
+.b-sh01 {
+border-radius: 30px;
+box-shadow: 0 0 10px #333; /* 모서리 깎기 */
+}
+.b-sh02 {box-shadow: 6px 0 3px #333;}
+.b-sh03 {box-shadow: 0 6px 3px #333;}
+
+#sec02:hover>p {
+box-shadow: 0 0 0 #333;
+transition: 2s ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

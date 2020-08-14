@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+section {border: 3px solid;
+margin: 10em 1em;/*위/아래 - 좌우  */
+width: 700px;
+padding: 1em;
+color: #55a;/*파란색  */ 
+}
+
+section>p {
+	border: 2px solid #a55;
+	width: 700px;
+	height: 700px;
+}
+
+#sec01>p {overflow: visible;}
+#sec02>p {overflow: hidden;}
+/*scroll, auto 둘다 스크롤바 만들지만
+scroll : 무조건 생성 
+auto : overflow 없을 경우 스크롤바 미생성  */
+#sec03>p {overflow: scroll;}
+#sec04>p {overflow: auto;}
+
+
+/*리스트 이미지로 생성  */
+#pro p{overflow: hidden;}
+/* #pro p:hover {overflow: visible;} */
+#pro img{width: 1000px;
+opacity: 0.4;}
+/*opacity: 투명도(투명:0-1:불투명)*/
+#pro>p:hover>img{
+	width: 640px;
+	transition: 1.5s;
+	opacity: 1;
+}
+
+/* 말줄임표 표시하기 */
+.txt-box {border: 1px solid;
+width: 200px;
+padding: 0.6em 1em;
+/* 아래 세 속성이 필수! */ 
+overflow: hidden; /*영역밖의 내용 숨김  */
+white-space: nowrap;/*강제 줄바꿈 금지  */
+text-overflow: ellipsis;}/*말줄임표(...)표시  */
+
+/*white-space: 공백태그
+ex white-space: pre: <pre>태그 효과
+   white-space: nowrap: 자동줄바꿈  */
+
+/*text-overflow: ellipsis: 말줄임표  */
+
+
+.txt-box:hover {
+	width: 100%;
+	transition: 1.5s;
+}
+
+
+.pre {white-space: pre;}

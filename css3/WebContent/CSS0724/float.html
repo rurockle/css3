@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="float.css" rel="stylesheet">
+</head>
+<body>
+<!--페이지 안에서 찾아가는 메뉴바  -->
+<nav id="main-nv">
+ <ul>
+  <li><a href="#left">float01</a></li>
+  <li><a href="#sec01">float02</a></li>
+  <li><a href="#sec02">float03</a></li>
+  <li><a href="#sec03">float04</a></li>
+  <li><a href="#sec04">float05</a></li>
+ 
+ </ul>
+
+</nav>
+
+<h1>float:left/right;</h1>
+<p>
+이미지에 float:left/right;을 주면<br> 
+이미지 주변으로 글자들이 자연스럽게 둘러싸며 배치됨.<br>
+(이미지가 공중에 뜨고 생긴 빈공간 아래에 있던 글자영역이 <br>
+밀고 올라와서 자리를 차지하고 글자는 둘러싸게 보여짐)
+</p>
+
+<div id="left">
+ <h2>float:left;</h2>
+ <img alt="pineapple" src="../img/pineapple.jpg"/>
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+</div>
+
+<div id="right">
+ <h2>float:right;</h2>
+ <p>
+이미지에 을 주면 이미지 주변으로 글자들이 자연스럽게 둘러싸며 배치됨.
+</p>
+ <img alt="pineapple" src="../img/pineapple.jpg"/>
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+</div>
+
+<hr>
+
+
+<h1>float으로 요소들을 한 줄에 나란히 정렬하기</h1>
+
+<p>
+요소들을 각자 float: left;를 주면 크기가 줄면서 한줄에 나란히
+좌측에 배치되고<br>
+요소들을 각자 float: right;를 주면 크기가 줄면서 한줄에 나란히
+우측에 배치되면서 요소들의 순서가 바뀐다.<br>
+
+float된 요소들의 영향으로 부모요소는 높이값이 없어진다.
+</p>
+
+<section id="sec01"> <!--주제별로 분류-->
+ <h2>float:left;</h2>
+ <div>div01</div>
+ <div>div02</div>
+ <div>div03</div>
+ <div>div04</div>
+
+
+</section>
+
+
+<section id="sec02"> <!--주제별로 분류-->
+ <h2>float:right;</h2>
+ <div>div01</div>
+ <div>div02</div>
+ <div>div03</div>
+ <div>div04</div>
+
+
+</section>
+
+<section id="sec03"> <!--주제별로 분류-->
+ <h2>float:left &amp; float:right;</h2>
+ <div class="div-l">div01</div>
+ <div class="div-l">div02</div>
+ <div class="div-r">div03</div>
+ <div class="div-r">div04</div>
+
+
+</section>
+
+
+<section id="sec04"> <!--주제별로 분류-->
+<p>나란히 배치하는 레이아웃용으로 float을 사용한 경우<br>
+<b>float을 적용한 요소들의 다음에 오는 요소</b>는 float의 영향을 받아서<br>
+밀고 올라오므로 <b>clear:both;를 적용해서 제자리로</b> 내려보낸다.
+
+</p>
+
+<header>
+ <nav>
+  <ul>
+   <li><a href="#">menu01</a></li>
+   <li><a href="#">menu02</a></li>
+   <li><a href="#">menu03</a></li>
+  </ul> 
+ </nav>
+</header>
+ <aside id="as-left">
+  aside left
+ </aside>
+ 
+ <article >
+  article center
+ </article>
+ 
+ <aside id="as-right">
+  aside right
+ </aside>
+
+ <footer>
+  copyright / tel / 
+
+ </footer>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

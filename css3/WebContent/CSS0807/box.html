@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>box-model</title>
+<link href="../style.css" rel="stylesheet">
+<link href="box.css" rel="stylesheet">
+</head>
+<body>
+ <h1>box-model</h1>
+ 
+ <h2>inline요소의 크기 조절</h2>
+  <h3>1. display: block; 로 성격을 바꿔줌</h3>
+ <a href="#" class="inli">a tag</a>
+ 
+  <h3>2. padding으로 내부여백을 늘려서 결과적으로 키움</h3>
+ <a href="#" class="padd">a tag</a>
+
+ <h2>box-sizing: border-box;</h2>
+ <p class="pre">
+  block요소의 크기는 컨텐츠영역까지가 기본으로 설정 되어있음.
+  (box-sizing: content-box;)
+   따라서 padding과 border를 주면 결과적으로 그만큼 요소의 크기가 더 커짐
+   레이아웃에 변화가 생길 수 있음
+   요소의 계산법을 바꿔서 해결함.
+   
+  <b>box-sizing: border-box;</b> 를 주면
+   요소의 크기(width,height)에 padding과 border가 포함됨
+ </p>
+<div class="box-big">
+ <div class="box01">   box01 </div>
+ <div class="box02">   box02 </div>
+ <div class="box03">   box03 </div>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

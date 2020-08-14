@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+body {scroll-behavior: smooth;}
+/*부드러운 스크롤 효과*/
+
+.stick-h1 { 
+position: sticky;/*body 제외, 부모가 있으면 적용되지 않음 */
+top: 0;
+z-index: 9999; /*최상단 메뉴이므로 내려가지 않게 설정*/
+}
+
+.stick-ol{
+position: sticky;
+top: 80px;
+z-index: 9999;
+}
+
+section>div {
+border: 1px solid;
+padding: 0.5em;
+width: 200px;
+}
+
+/*기본값 position:static;은 이동이 안됨  */
+#sec01>div {position: static;}
+.stat01 {top:100px;}
+.stat02 {left:200px;}
+/*========================================*/
+/*position:relative;*/
+#sec02>div {position: relative;}
+/*탑에서 아래로 100px*/
+
+
+.rel01 {top:100px;
+color: #f00;/*red*/}
+
+/*왼쪽에서 오른쪽으로 200px이동*/
+.rel02 {left:200px;
+color: #0f0;/*green*/}
+
+/*밑에서 위로 100px 이동  */
+.rel03 {bottom: 100px;
+color: #00f;/*blue*/}
+
+/*기본위치에서 오른쪽으로 200px 이동 하면밖으로 나가버림*/
+.rel04 {right: 200px;
+color: #ff0;/*yellow*/}
+
+.rel05{bottom: 100px;
+left:150px;
+color: #0ff; /*sky*/}
+
+.rel06{top: 150px;
+right: 50px; 
+color: #f0f; /*pink*/}
+
+#sec02:hover>div {
+/*부모에게 마우스 오버 시 제자리로 이동(기본값은 이동 안됨!) */
+	position: static;
+	 
+}
+
+
+/*겹치는 경우 z-index를 활용하여 오버레이 만들기 
+  z-index:n; */
+
+.rel07{background-color: red;
+z-index: 52;}
+.rel08{background-color: orange;
+bottom: 20px; left:50px;
+z-index: 50;}
+.rel09{background-color: yellow;
+bottom: 50px; right: 20px;
+z-index: 51;}
+/*========================================*/
+/*position-absolute */
+.rel-h2 {position: relative;
+left: 30px;
+bottom: 20px; /*영역 벗어나면 사라지게  */
+}
+
+/*부모는 relative 지정 필요! */
+/*자식의 기준이 되기 위한 부모의 설정 */
+#sec03 {position: relative; 
+height: 500px;
+overflow: hidden;} /*부모영역 높이 조절 */
+
+#sec03>div{	position: absolute;}/*부모(sec03)기준 한군데 모임*/
+/*부모 기준으로 자리잡는 자식의 설정*/
+.abs01 {color: red;
+left: 0; top: 0;}/*11시방향*/
+.abs02 {color: orange;
+right:0; top: 0;}/*1시방향  */
+.abs03 {background-color: yellow;
+left: 0; bottom: 0;}/*7시방향*/
+.abs04 {color: green;
+right:0; bottom: 0;}/*5시방향*/
+.abs05 {color: blue;
+left: 50%; top: 50%; /*1px 점 기준 중앙(왼쪽 끝 모서리)*/
+}
+
+/*왼쪽끝에서 본문으로 이동하는 애니메이션  */
+.abs06 {color:navy;
+	left: 0;
+	top: -150px; 	
+}
+#sec03:hover>.abs06{left:300px; top:150px;
+transition: 2s;} 
+/*벗어나면 안 보이고,부모 마우스 오버시 안에 나타나게*/
+/*========================================*/
+
+/*position: fixed; */
+#sec04 {/* position:fixed; */ 
+right: 0;
+bottom: 10px;}
+
+/*[1]퀵링크 메뉴 작업  */
+#quick {border: 1px solid;
+width:150px;
+background-color: #337;
+border-radius: 16px 0 0 16px;
+/*메뉴바 모서리 동그랗게 깎기(좌상 우상 우하 좌하순 */
+position: fixed; /*기본 fixed하면 안 보임 위치값 필요  */
+top:30%;  /*위에서 30%위치  */
+right: -134px; /*평상시에 일부만 보이게*/
+opacity: 0.5;/*평상시에 반투명하게 */
+}
+/*opacity: 요소 투명도 조정 (투명)0~1(불투명)*/
+
+#quick:hover {
+	right:0; /*마우스 오버시 메뉴바 나오게 */
+	transition: 0.5s;/*메뉴바 나오는 속도 조절*/
+	opacity: 1;/*마우스 오버시 본래 색깔로*/
+}
+
+#quick>ul {border: 1px solid red;
+list-style: none; /*목록앞모양 없애기 */
+padding: 0; /*목록앞모양 none 때 여백 없애기  */
+}
+
+
+#quick li {/* border: 1px solid blue; */
+margin-left: 1em;
+}
+
+ /*초기링크상태:link | 방문한 상태:visited  */
+#quick a:link, #quick a:visited {
+/* border: 1px solid; */  /* 인라인요소로 display바꿔줌*/
+display: block; /*a태그 속성을 바꿔서 범위 안의 길이가 길어짐*/
+color: #fff;
+text-decoration: none;	
+margin-right: 1em;
+}
+
+/*hover: 스마트폰에선 안됨|active: 링크누르고 있는 동안 */
+#quick a:hover, #quick a:active {
+color: #aef;
+border-bottom: solid;
+padding-bottom: 0.5em;
+}
+/*우하단 메뉴 퀵링크 작업  */

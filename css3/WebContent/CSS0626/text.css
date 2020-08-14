@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+section { /* 테두리 크기 / 종류 / 색깔 */
+	border:4px solid #999;/* solid: 단선 */
+	margin: 5em 1em; /*margin: 여백  */
+	padding: 1em;
+}
+
+/*text-align 글자의 수평정렬    */
+#sec01>p {border: 1px solid #00f;}
+
+#sec01 img {width: 50px;}
+
+section>h2 {color: #999;}
+
+/* p영역에 마우스를 올렸을 때, 그림이 이동하게 */
+
+p.ta02:hover{
+	text-align: right;
+}
+
+section>h2>span {
+	font-size: 0.6em; /*상대적인 크기 */
+	color: #aad;
+	vertical-align: 0.5em;/* 수직정렬 */	
+}
+
+.ta01 {text-align: left;}
+
+.ta02 {text-align: center;}
+
+.ta03 {text-align: right;}
+
+.ta04 {text-align: justify;} /*양쪽정렬*/ 
+
+
+
+/* text-decoration 글자의 줄 */
+#sec02>p {color: #060;}
+
+.tde01 {text-decoration: overline;} /* 콘텐츠 위에 줄 */
+.tde02 {text-decoration: line-through;} /* 취소선 */
+.tde03 {text-decoration: underline;} /* 밑줄 */
+.tde04>a {text-decoration: none; 
+font-size: 1.5em;} 
+/* a태그는 중요한 태그여서 직접 값을 줘야 바뀜 */
+
+/* 링크 위에 마우스 오버시, 언더라인, 주황색글자 */
+.tde04>a:hover{text-decoration: underline; 
+color: #ea0} 
+
+
+/*text-transform 영문 글자의 대소문자*/
+#sec03>div {border: 1px solid;
+margin: 1em 0;}
+
+.ttr01 {text-transform: none;}
+.ttr02 {text-transform: uppercase;}
+.ttr03 {text-transform: lowercase;}
+.ttr04 {text-transform: capitalize;}
+
+/* 부모에 마우스를 올렸을 때 기본속성으로 돌아가기 */
+#sec03:hover div {text-transform: none;}
+
+
+/* text-indent 들여쓰기 */
+/* 첫줄만 적용됨
+    */
+
+
+#sec04>p {background-color: #33f;
+color: #fff;}
+
+.tin01 {text-indent: 10px;} /* 16px글자하나 */
+.tin02 {text-indent: 20px;} /* 고정값 */
+.tin03 {text-indent: 10%;} /* 페이지 크기에 따라 상대적 */ 
+.tin04 {text-indent: 1em;} /* 글자1개 16px = 1em*/
+.tin05 {text-indent: 1pt;}
+.tin06 {text-indent: -5em;} /* 음수값도 가능(표가 있으면 왼쪽으로 나감) */ 
+
+
+
+
+/* text-shadow: 글자의 그림자 안함!*/ 
+
+
+
+
+
+
+
+
+
+
+
+
+

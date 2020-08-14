@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+
+/*body 태그 속성 부여시, rem 영향 없음
+  html 태그 속성 부여시, rem 영향 있음(root는 html기준)
+  ** rem 단위의 기준이 된 최상위 요소!*/
+/* html {font-size: 30px;} */
+
+
+/* h1 {border: 4px double; 테두리 두께; 이중실선 
+color: #333; 색깔 진한 회색
+font-size: 40px; 글자 크기
+font-weight: normal; 글자 두께
+font-style: italic; 글자 기울기
+font-family: "돋움체", "돋움", "굴림체", sans-serif;} 글꼴(서체)*/
+h1 {border: 4px double; 
+color: #333; 
+font-size: 40px;
+font-weight: normal;
+font-style: italic;
+font-family: "돋움체", "돋움", "굴림체", sans-serif;}
+
+
+/* border: none; 테두리 없애기
+   border-bottom: 4px double; 밑에 이중줄
+   font-style: normal; 기울임 없애기  */
+div>h1 {
+	border: none;
+	border-bottom: 4px double;
+	font-style: normal;
+	color: #69d;
+	font-family: 'Gugi', cursive;
+}
+
+
+
+/* id 선택자: 한 번만 사용할 수 있는 선택자 
+padding여백 
+부모한테 font-size 30px를 주면 em단위는 바뀜*/
+
+h2 {color: #acf;}
+
+div{border: 2px solid #acf;
+margin:3em 1em;
+padding: 1em;}
+
+#size {font-size: 10px;}
+/* font-size
+클래스 선택자는 이름 앞에 .을 붙여 표시
+px(픽셀) 점하나, 높이가 폰트의 크기
+em: 상대적인 단위 배수; 
+    기준이 되는 글자크기 16px=1em 8px=0.5em
+em / rem 비교: rem(root) 부모의 속성에 영향을 받지 않고 기본값을 기준으로 변경됨
+% : 부모 속성에 영향을 받는 상대적 크기
+*/
+.fs01 {font-size: 16px;}
+.fs02 {font-size: 20px;}
+.fs03 {font-size: 1em;}
+.fs04 {font-size: 1.25em;}
+.fs05 {font-size: 1rem;}
+.fs06 {font-size: 1.25rem;}
+.fs07 {font-size: 100%;}
+.fs08 {font-size: 160%;}
+
+/* font-weight(글자 두께)
+태그에서는 <b>, <strong> <h1~>제목글자태그, <th>는
+bold체 속성을 가지고 있음
+bold는 꼭 기억하자! */
+ 
+.fw01 {font-weight: bold;}
+.fw02 {font-weight: bolder;}
+.fw03 {font-weight: lighter;}
+.fw04 {font-weight: 100;}
+.fw05 {font-weight: 200;}
+.fw06 {font-weight: 300;}
+.fw07 {font-weight: 400;}
+.fw08 {font-weight: 500;}
+.fw09 {font-weight: 600;}
+.fw10 {font-weight: 700;}
+.fw11 {font-weight: 800;}
+.fw12 {font-weight: 900;}
+
+
+/* 상태 선택자: 마우스 오버시 안 두꺼워지게 만들기 
+:hover 마우스 오버시의 상태를 지정하는 상태 선택자
+줄바꿈이 자동으로 일어나는 태그는, 영역이 행 100%임*/
+
+h3:hover {font-weight: normal;}
+
+b:hover {font-weight: normal; font-style: italic;}
+
+strong:hover {
+	font-weight: lighter; 
+	color: #acf;
+	font-size: 18px;}
+	
+.th01 {font-weight: normal;}
+
+
+/* font-style */
+
+.fst01 {font-style: italic;}
+.fst02 {font-style: oblique;}
+.fst03:hover {
+	font-style: normal;
+}
+
+i:hover{font-style:normal;}
+
+/* fst03:hover>em 부모가 fst03이고 자식이 em일 때 
+1) A>B: 자식 선택자(상위요소의 바로 아래에 속한 요소를 지정함)
+관계 속성은 '부모 > 자식' 관계선택자를 이용하여 나타냄
+ 
+2) A B: 자손 선택자(상위 요소의 아래에 속한 모든 요소를 지정함)
+부모 > 자식 > 손자 관계 일 때 '부모' '손자'와 같이 한칸 띄워 표시 */
+
+/* 부모 영역, 자식 영역 모두 적용됨 */
+.fst03:hover>em { 
+	font-style: normal;}
+	
+
+.fst03:hover>i {
+	font-style: normal;}
+
+
+/* font-family(글꼴, 서체) */
+
+
+/* #ececec; 밝은 회색 */
+
+#family>pre {
+	background-color: #ececec;
+	width: 450px;
+	font-family: "맑은 고딕", sans-serif;	
+}
+
+.ffm01 {font-family: "Georgia", "Times New Roman", serif;} 
+
+.ffm02 {font-family: "Verdana", "Arial", sans-serif;}
+
+.ffm03 {font-family: "Courier New", "Lucida Console", Monospace;}
+
+
+/* 
+https://fonts.google.com/
+
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Nanum Pen Script', cursive;
+font-family: 'Gugi', cursive;
+*/
+
+/*쌍따옴표 외따옴표 상관없음*/
+
+.ffm04 {font-family: 'Nanum Pen Script', cursive;}
+.ffm05 {font-family: 'Nanum Myeongjo', serif;}
+
+
+
+

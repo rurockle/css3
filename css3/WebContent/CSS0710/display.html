@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="display.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>display요소의 성격</h1>
+<ol>
+<li>display: inline; block을 inline요소로 바꿈 </li>
+<li>display: block; inline을 block요소로 바꿈 </li>
+<li>display: inline-block; inline,block요소들을 중간으로 바꿈</li>
+<li>display: none; 화면에서 사라짐</li>
+</ol>
+<!-- Block한줄에 나란히 못온다! -->
+마우스올리면 글자나온다
+<pre>
+block요소는 한 줄에 나란히 올 수 없음.
+	크기 적용 가능. 양사방  margin적용 가능
+	
+inline요소는 한 줄에 나란히 올 수 있음.
+	크기 적용 안됨. 좌우  margin만 적용 가능
+
+
+<b>
+inline-block은 한줄에 나란히 올 수 있으면서 크기 적용 가능.
+	양 사방  margin적용 가능.
+</b>
+
+</pre>
+
+<nav>
+	<ul><!-- 가로 메뉴바를 만들기 위해  성격을 바꾼다-->
+		<li class="mn01"><a href="#">menu01</a>
+		<ul class="sub">
+		<li><a href="#">sub01</a></li>
+		<li><a href="#">sub01</a></li>
+		</ul>
+		</li>
+		<li><a href="#">menu02</a></li>
+		<li><a href="#">menu03</a></li>
+	</ul>
+</nav>
+
+<section id="sec01">
+<h2>inline요소</h2><!-- inline요소는 크기  적용이 안됨, margin위아래 적용 안됨. -->
+<b>b tag</b>
+<i>i tag</i>
+<a href="#">a tag</a> <!--padding을 줘서 번호 1, 2, 3 조절가능--> 
+<span>span tag</span>
+<label>label tag</label>
+</section>
+<!-- 
+img, input은 인라인요소인데 크기가 적용된다.  
+-->
+
+
+<section id="sec02">
+<h2>block요소</h2><!--block요소는 한칸 내려감-->
+
+<p>p tag</p>
+<div>div tag</div>
+<aside>aside tag</aside>
+
+
+</section>
+
+<section id="sec03">
+<h2>inline-block 요소</h2>
+
+<b>inline - b tag</b>
+<i>inline - i tag</i>
+<a href="#">inline - a tag</a>  
+<span>inline - span tag</span>
+<label>inline - label tag</label>
+
+<p>block - p tag</p>
+<div>block - div tag</div>
+<aside>block - aside tag</aside>
+
+
+</section>
+
+
+<section id="sec04">
+ <h2>display:none;</h2>
+ <p class="pre">
+  display:none;은 요소의 공간까지 같이 사라짐. (레이아웃의 변화있음)
+  visibility:hidden;은 요소의 공간은 남아있고 요소만 사라짐. (레이아웃 변화 없음)  
+ </p>
+ 
+ <table>
+  <tr>
+   <th>th01</th><th class="dis-none">th02</th><th>th03</th>
+  </tr>
+  <tr>
+   <td>td01</td><td>td02</td><td>td03</td>
+  </tr> 
+ </table>
+
+  <b>b-01</b> <b class="vis-hid">b-02</b> <b class="dis-none">b-03</b>
+  
+  
+  <h2>visibility:hidden;</h2>
+ 
+
+  <b>b-01</b> <b class="vis-hid">b-02</b> <b>b-03</b>
+  <b>b-01</b> <b class="dis-none">b-02</b> <b>b-03</b>
+
+  <h2></h2>
+  
+  
+</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

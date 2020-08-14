@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.st>li{
+border-width: 8px; 
+border-color: #599;
+background-color: #9dd;
+margin-bottom: 2em;
+padding: 0.5em;
+}
+
+.st>li:nth-of-type(1) {
+border-style:none; ;
+}
+
+.st>li:nth-of-type(2) {
+border-style: hidden; ;
+}
+.st>li:nth-of-type(3) {
+border-style: dotted;
+}
+.st>li:nth-of-type(4) {
+border-style: dashed;
+}
+.st>li:nth-of-type(5) {
+border-style: solid;
+}
+.st>li:nth-of-type(6) {
+border-style: double;
+}
+.st>li:nth-of-type(7) {
+border-style: groove;
+}
+.st>li:nth-of-type(8) {
+border-style: ridge;
+}
+.st>li:nth-of-type(9) {
+border-style: inset;
+}
+.st>li:nth-of-type(10) {
+border-style: outset;
+}

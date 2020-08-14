@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+
+<title>CSS basic</title>
+<!-- 1.External CSS = 외부 파일 방식-->
+<link href="basic.css" rel="stylesheet">
+
+<!--2.internal CSS - 임베디드 CSS -->
+<style type ="text/css">
+.bl {color:blue;}
+</style>
+
+</head>
+<body>
+<h1>CSS basic</h1>
+
+<p>
+선택자{  
+
+속성:속성값;
+속성:속성값;
+속성:속성값;
+	...
+} ---- (선택자는 꾸며줄 대상, 주인공)
+</p>
+
+<h2>CSS를 적용하는 방식 3가지</h2>
+ <ol>
+  <li class="gr">External CSS - 외부파일 방식<br>
+  CSS파일을 따로 만들어 독립시키고(*.css) html문서와 연결시켜 적용<br>
+  통일성 있는 디자인 구성이 가능하며 유지보수가 용이</li><br>
+  
+  <li class="bl">Internal CSS - 임베디드 방식(Embedded)<br>
+  CSS소스가 html문서의 head안에 존재<br>
+  해당 html문서에만 적용됨</li><br>
+  
+  <li style ="color:orange;"> Inline CSS - 인라인 방식<br>
+  CSS소스가 html문서의 해당 태그 뒤에 존재.<br>
+  통일성 있는 디자인 구성이 어렵고, 유지보수시 불리<br>
+  (적용시 나머지 방식보다 우선순위가 가장 높음)</li>
+ </ol>
+ 
+<h2>CSS선택자 대표 3가지</h2>
+<p class="pre">
+선택자의 종류가 많으며 그 중 대표적인 종류는 아래와 같다.
+*는 전체선택자로 말 그대로 웹문서의 모든 선택자를 불러올 수 있다.
+
+</p>
+ <ul>
+  <li class="pre">tag선택자 
+  - tag를 그대로 사용 (abc) </li>
+  
+  <li class="pre" id="li05">id선택자 
+  - tag에 id를 지정하고 그 id값을 선택자로 활용 (#abc)
+  중복 적용 불가 / 주로 구조적인 목적에 이용</li>
+  
+  <li class="pre gr" id="li05" >class선택자 
+  - tag에 class를 지정하고 class값을 선택자로 활용 (.abc)
+  중복 적용 가능 / 조합가능 / 주로 디자인적인 목적에 이용</li>
+ 
+ </ul>
+
+</body>
+</html>

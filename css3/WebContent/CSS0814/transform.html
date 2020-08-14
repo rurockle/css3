@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>transform</title>
+<link href="transform.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>transform: ; 변형</h1>
+<h2>변형함수</h2>
+<ol> 
+ <li>translate() 위치 변형</li>
+ <li>scale() 크기 변형</li>
+ <li>rotate() 회전 변형</li>
+ <li>skew() 기울기 변형</li>
+</ol>
+
+<section id="sec01">
+ <h3>transform: translate(); 위치변형</h3>
+ 
+ <div class="tra01">transform: translateX(800px);</div>
+ <div class="tra02">transform: translateY(300px);</div>
+ <div class="tra03">transform: translateX(-50px);</div>
+ <div class="tra04">transform: translateY(-300px);</div>
+ <div class="tra05">transform: translate(800px,-300px);</div>
+ <div class="tra06">transform: translate(300px,150px);</div>
+
+ <div class="center">
+ position: absolute; <br>
+ left:50%, top:50% <br>
+ transform:translate(-50%,-50%)</div>
+
+
+ <p>translate의 단위가 %일 때
+    자기 자신의 크기가 기준이 된다!!</p>
+
+</section>
+
+
+<section id="sec02">
+ <h3>transform: scale(); 크기 변형</h3>
+ <!-- 1이 기준  -->
+ <div class="sca01"> 
+  <img src="../img/landscape-sky.jpg">
+ </div>
+ <div class="sca02"> 
+  <img src="../img/landscape-sky.jpg">
+ </div>
+ <div class="sca03"> 
+  <img src="../img/landscape-sky.jpg">
+ </div>
+ <div class="sca04"> 
+  <img src="../img/landscape-sky.jpg">
+ </div>
+ <div class="sca05"> 
+  <img src="../img/landscape-sky.jpg">
+ </div>
+ <div class="sca06"> 
+  <img src="../img/landscape-sky.jpg">
+ </div>
+
+</section>
+</body>
+</html>

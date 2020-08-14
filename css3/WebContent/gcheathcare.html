@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>녹십자 1:1 문의 페이지</title>
+<style type="text/css">
+
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-color: #50507c;
+	 
+}
+
+</style>
+</head>
+<body>
+
+<div id="container" style="width:1100px">
+
+ <div id="header" style="background-color:#ffa500;">
+  <h1 style="margin-bottom: :0;">LOGO</h1>
+
+ </div>
+   <nav>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <b>회사소개&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 비즈니스&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp; 홍보센터 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;채용 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dr.PNT몰</b>
+   </nav>
+
+<hr>
+
+ <div id="menu" style="background-color:#ffffe6;height:770px;width:180px;float:left;">
+  <ul type=none >
+ 	<li>FAQ(1:1문의)</li>
+ 	<br>
+ 	<li>자주하는문의</li>
+ 	<br>
+ 	<li>비즈니스</li>
+ 	<br>
+ 	<li>서비스/기타</li>
+ 	<br>
+ 	<li>주문/결제</li>
+  </ul>
+
+</div>
+
+<div id="content" style="background-color: :#eeeeee;height:770px;width:400px;float:left;">
+
+<form action="request.jsp" method="post" id="fr">
+
+ <h3>※개인정보수집 및 이용목적※</h3>
+ <table id="pri" style=text-align:center;width:770px;> 
+  <tr><th>수집목적</th><th>수집항목</th><th>보유기간</th></tr>
+  <tr><td>민원내용 확인, 처리결과 회신,<br>사실조사를 위한 연락 </td><td>이름,연락처,이메일</td><td>문의처리 후 1년</td></tr>
+  <tr><td colspan="3">※ 1:1문의 서비스를 이용하기 위한 최소한의 개인정보이므로 동의를 해주셔야 서비스 이용이 가능합니다</td></tr>
+  <tr><td colspan="3" style="text-align:center;"> <input type="radio" name="agree" value="ok">동의합니다.
+  					   <input type="radio" name="disagree" value="no">동의하지않습니다. </td></tr>	
+ </table>
+ <br>
+ <br>
+  <h3>※고객정보※</h3>
+   <table style=width:800px;>
+   
+   <tr><th><label for="name">이름</label></th><td><input type="text" name="name" id="name"></td></tr>
+   <tr><th><label for="phone">연락처</label></th><td>
+    <select name="sel" style=width:175px;>
+     <option>010</option>
+     <option>011</option>
+     <option>016</option>
+     <option>017</option>
+     <option>018</option>
+     <option>019</option>
+    </select> - <input type="text" name="name" id="phone1">- <input type="text" name="name" id="phone2"></td></tr>
+   <tr><th>이메일</th><td>
+   <input type="text" name="name" id="phone1">@
+   <input type="text" name="name" id="phone1">
+   <select name="sel" style=width:175px;>
+     <option selected>선택해주세요</option>
+     <option>naver.com</option>
+     <option>gmail.com</option>
+     <option>daum.net</option>
+     <option>nate.com</option>
+     <option>직접입력</option>
+    </select>
+   </td></tr>
+   
+   </table>
+   <br>
+   <br>
+  <h3>※문의내용※</h3> 
+ 	<table style=width:800px;>
+ 	<tr><th>구분</th><td>&nbsp;&nbsp;&nbsp;&nbsp;<select style=width:175px><option>대분류</option></select><select style=width:175px><option>중분류</option></select>
+ 	
+ 	</td></tr>
+ 	<tr><th>제목</th><td>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="width:680px"></td></tr>
+ 	<tr><th>내용</th><td>&nbsp;&nbsp;&nbsp;&nbsp;<textarea rows="10" cols="95"></textarea></td></tr>
+ 	<tr><td colspan="2" style="text-align: right;">
+ 		<input type="submit" value="작성완료">
+ 		<input type="reset" value="초기화">
+ 	
+ 	</td></tr>
+ 	
+ 	</table>
+ </form>
+
+
+</div>
+
+
+  
+</body>
+</html>

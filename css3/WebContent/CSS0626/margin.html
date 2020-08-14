@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>margin</title>
+<link href="margin.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>margin 요소의 외부 여백</h1>
+<pre class="m01">
+ margin은 요소의 테두리(border)를 기준으로 외부 여백이다. 
+ 양사방 존재함.
+ 요소의 위치와 관련됨.
+</pre>
+
+<pre class="m02">
+ padding은 요소의 테두리(border)를 기준으로 내부 여백이다. 
+ 양사방 존재함.
+ 요소의 위치와 관련됨.
+</pre>
+
+<section id="sec01">
+<h2>margin: n; 값이 하나로 양사방이 동일하게 적용됨</h2>
+ <div class="box01">margin: 50px;</div>
+ <div class="box02">margin: 10px;</div>
+ <div class="box03">margin: 10%</div>
+ <div class="box04">margin: auto;</div>
+</section>
+
+
+<section id="sec02">
+<h2>margin: n n; 값이 2개로 수직(상하)과 수평(좌우)이 동일하게 적용됨</h2>
+ <div class="box05">margin: 100px 0;</div>
+ <div class="box06">margin: 0 100px; </div>
+ <div class="box07">margin: 50px 20% </div>
+ <div class="box08"><b>margin: 0 auto;</b><br>
+ 가로 크기가 100%보다 작은 요소를 항상 중앙정렬하고 싶으면 
+ 로 margin: 0 auto;로 지정한다.<br>
+   * <b>수평방향을 auto</b>로 지정한다. </div>
+</section>
+
+
+
+<section id="sec03">
+<h2>margin: n n n; 값이 3개면 '상, 수평(좌우), 하'의 순서로 적용됨</h2>
+ <div class="box09">margin: 150px 50px 10px; </div>
+ 
+ </section>
+
+<section id="sec04">
+<h2>margin: n n n n; 값이 4개면 '상,우,하,좌(시계)'의 순서로 적용됨</h2>
+ <div class="box10">margin: ;</div>
+ <div class="box11">margin: ;</div>
+ <div class="box12">margin: ;</div>
+ 
+ </section>
+
+
+<section id="sec05">
+
+<label for="fnm">first-name</label> <input type="text" id="fnm"><br>
+<label for="lnm">last-name</label> <input type="text" id="lnm">
+
+
+ </section>
+
+
+
+
+
+<section id="sec06">
+<h2>margin/-top/-right/-bottom/-left : ;각 방향별 지정 속성</h2>
+
+<p class="mt"> margin-top: 60px;</p>
+<p class="mr"> margin-right: 3em;(48px)</p>
+<p class="mb"> margin-bottom: 30px;</p>
+<p class="ml"> margin-left: 10%</p> 
+
+<!--
+**인라인 속성을 갖는 tag**
+inline요소(줄이 안 바뀌는 요소)들은 
+상하 margin 적용이 안됨 // (input/img)는 예외임  -->
+<!--알수 없는 공백 / space bar 또는 enter키  -->
+<b>b tag</b><i>i tag</i> <span>span tag</span>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/*메뉴바 li 앞 동그라미 제거 */
+
+#main-nv{
+/* 	border:1px solid red; */
+	margin-top: 50px;
+	margin-bottom: 60px;
+	overflow: hidden;
+	/*영역 넘치는 내용있을 때 어떻게?
+	보여줄?안보여줄?스크롤?
+	hidden: 영역밖의 내용 처리-숨김으로
+	자식들이 float으로 빠져나가서 생긴 부모의 높이(형태)를
+	다시 살림  */	
+}
+
+#main-nv ul{/* border: 1px solid red; */
+	list-style: none;
+	float: right;}/*전체를 우측메뉴바로..  */
+	
+	
+#main-nv li{
+	/* border:1px solid; */
+	float: left;/*각각 메뉴들을 한 줄에 나란히  */
+ 	margin-left: 15px; 
+	/*자식 li 간격 띄우기  */
+}
+
+#main-nv a{
+	/* border: 1px solid; */
+	text-decoration: none;
+	/*display에 block을 주던지 padding사용  */
+	padding: 8px 10px;/*위아래 5px 좌우 10px  */
+}
+/*하이퍼링크 초기 / 방문 후  */
+#main-nv a:link, #main-nv a:visited{
+	background-color: #330;
+	color: #ff0;
+}
+          /*마우스를 올리면 / 클릭시 */
+#main-nv a:hover, #main-nv a:active{
+	background-color: #ff0;
+	color: #330;
+	transition: 1.2s;
+	/*1.2초 동안 속성값의 변화를 줌 */
+	/*변화하는 시간 조정 
+	주로 hover와 사용 */
+}
+
+h1{/* background-color: #0d0; */
+clear: both;} /*float의 영향을 해제함*/
+
+p {line-height:1.8;
+background-color: #eee}
+/* 글 간격(높낮이 1.6이상)  */
+p>b{
+	background-color: #9fc;
+	padding: 5px;
+}
+
+
+/* float-left */
+#left, #right {border: 4px dashed #ccc;
+width: 40%;
+margin: 3em 1em;
+padding: 1em;
+display: inline-block; 
+vertical-align: top;}
+/*vertical-align: 수평정렬 */
+
+#left img {width: 70%;
+margin-right: 1em;
+float:left;}
+
+#left p{border:4px solid #00c;}
+
+/* float-right */
+#right img {width: 70%;
+float:right;
+margin-left: 1em;
+text-align: right;}
+
+/* float-으로 요소들을 한줄에 나란히 정렬  */
+section {border:4px dotted #666;
+margin: 4em 1em;
+padding: 1em;
+}	
+
+section>div {border: 1px solid;}
+
+#sec01>div{float: left;}
+
+#sec02>div{float: right;}
+
+#sec03>.div-l{color: red;
+float: left;
+}
+
+#sec03>.div-r{float: right;
+color: blue;}
+
+
+/* 레이아웃 만들기 */
+
+
+header {border: 1px solid #333;
+height: 200px;}
+
+/*목록 앞의 모양 제거 */
+header nav ul {list-style: none;}
+ 
+header nav li{border: 1px solid #930;
+ float: left;
+ margin-right: 10px;}
+ /* 하이퍼링크 밑줄 제거 */
+ nav a {text-decoration: none;} 
+
+
+aside, article{height: 600px;}
+
+#as-left, article{float:left;}
+#as-right{float: right;}
+
+aside {border: 1px solid #f33;
+width:20%;
+margin: 1em 0;}
+
+article {border: 1px solid #33f;
+width:50%;
+margin: 1em 0.7%;}
+
+
+footer {border: 1px solid #333;
+background-color: rgba(0,0,50,0.5);
+height: 100px; clear: both;}
+
+
+
+
+

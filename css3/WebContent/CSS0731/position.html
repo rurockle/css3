@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>position</title>
+<link href="position.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+</head>
+<body>
+<h1 class="stick-h1">position:; 요소의 위치 지정법 결정하기</h1>
+
+ <ol class="stick-ol">
+  <li>position: static; (기본값) 위치지정 안됨</li>
+  <li>position: relative; 현재 위치에서부터 ~ 위치지정</li>
+  <li>position: absolute; 부모 위치에서부터 ~ 위치지정</li>
+  <li>position: fixed; 브라우저 창에서 ~ 위치고정</li>
+  <li>position: sticky; relative와 fixed의 믹스
+  <br>(body태그 외에 다른 부모요소가 있으면 안 됨)</li>
+       
+ </ol>
+
+<section id="sec01">
+  <h2>position: static; (기본값) 위치지정 안됨</h2>
+
+  <div class="stat01">position:static; top:100px;</div> <!--기본마진 없음-->
+  <div class="stat02">position:static; left:200px;</div>
+
+</section>
+
+
+
+<section id="sec02">
+  <h2>position: relative; 현재 위치에서부터 ~ 위치지정</h2>
+  
+  <div class="rel01">position:relative; top:100px;</div> <!--기본마진 없음-->
+  <div class="rel02">position:relative; left:200px;</div>
+  <div class="rel03">position:relative; bottom:100px;</div>
+  <div class="rel04">position:relative; right:200px;</div>
+  <div class="rel05">position:relative; bottom: 100px; left:150px;</div>
+  <div class="rel06">position:relative; top:150px; right:50px;</div>
+  
+  <h3>z-index: n(음수가능);</h3>
+  
+  <p class="pre">
+     요소들이 겹치는 경우
+  	z-index의 값이 클수록 위로 올라온다.
+  	(HTML소스상에서 태그는 추가될 때마다 z-index의값이 1씩 증가함
+  	따라서 마지막에 입력한 요소가 최종적으로 항상 제일 위에 위치하게 됨)
+  </p>
+  <div class="rel07">z-index:52;</div>
+  <div class="rel08">z-index:50;</div>
+  <div class="rel09">z-index:51;</div>
+  </section>
+
+  
+  
+<section id="sec03">
+  <h2 class="rel-h2">position: absolute; 부모 위치에서부터 ~ 위치지정 </h2>
+  <p class="pre">
+  1. 자식의 기준이 되기 위한 부모의 설정(position: relative;)
+  2. 부모 기준으로 자식 위치 설정(position: absolute;)
+  </p>
+  <div class="abs01">position:absolute;<br>left:0; top:0;</div>
+  <div class="abs02">position:absolute;<br>right:0; top:0;</div>
+  <div class="abs03">position:absolute;<br>left:0; bottom:0;</div>
+  <div class="abs04">position:absolute;<br>right:0; bottom:0;</div>
+  <div class="abs05">position:absolute;</div>
+  <div class="abs06">position:absolute;</div>
+  
+</section>
+  
+  
+
+<section id="sec04">
+ <h2>position: fixed; 브라우저 창에서 ~ 고정</h2>
+  <p class="pre">
+    브라우저 창에 고정이 되므로 스크롤바를 움직여도 
+    항상 그 위치에 있고 창 크기를 조절해도 해당 위치에 고정되어 있다.
+    주로 퀵링크 등에 사용됨.  
+    (적용 후에 거리값을 주지 않으면 안 보임)
+  </p>
+ <nav id="quick"><!--메뉴바 퀵링크  -->
+  <ul>
+   <li><a href="#">맨 위로</a></li> 
+   <!--#: 임시링크, 페이지제일위로 이동-->
+   <li><a href="#sec01">sec01</a></li>
+   <li><a href="#sec02">sec02</a></li>
+   <li><a href="#sec03">sec03</a></li>
+   <li><a href="#sec04">sec04</a></li>
+  </ul>
+ </nav>
+
+
+</section>
+  
+  
+  
+  </body>
+  </html>
+  

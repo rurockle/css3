@@ -1,0 +1,37 @@
+@charset "UTF-8";
+h1 {color:#720;}
+h2 {color:#530;} 
+
+h1, h2 {margin: 3em 1em;
+padding-top: 0.4em 1em;
+border-top: 4px solid;
+border-bottom: 2px solid;
+}
+/* h1, h2 {margin: 3em 1em; */
+/* padding-top: 0.4em 1em; 위쪽 간격 */
+/* border-top: 4px solid; 위쪽 줄 생성*/
+/* border-bottom: 2px solid; 아래쪽 줄 생성 */
+/* } */
+
+
+.gr {color:green;}
+
+p {background-color: #cdf;}
+
+span {font-weight: bold;}
+
+.pre {white-space: pre;}
+#id {white-space: pre;}
+
+#li05 {line-height: 2;}
+
+/* .gr {color:green;} class 선택자{글자색}*/
+  
+/* p {background-color: #cdf;} tag 선택자{배경색} */
+
+/* span {font-weight: bold;} tag선택자{볼드속성}*/
+
+/* .pre {white-space: pre;} class선택자{pre태그속성}*/
+/* #id {white-space: pre;} id선택자{pre태그속성}*/
+
+/* #li05 {line-height: 2;} id선택자{줄간격} */
