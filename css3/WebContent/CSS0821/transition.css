@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* 
+transition
+transition-delay
+transition-duration
+transition-property
+transition-timing-function */
+
+.trans {
+width: 170px;
+border-radius: 10px;
+}
+
+.trans:hover {
+background-color: #3a8; /*초록색*/
+width: 300px;
+border-radius: 15px;
+font-size: 50px;
+transition: width 2.5s 0.7s ease-out;
+        /* 속성 | 진행시간| 지연시간 | 가속/감속 */
+        /* 지정한 속성만 천천히 늘어남 */
+}

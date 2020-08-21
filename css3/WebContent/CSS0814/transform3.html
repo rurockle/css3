@@ -1,0 +1,167 @@
+<!-- css transform 변형 -->
+<!-- 변신 : 크기, 각도 -->
+<!-- 2차원(xy평면) 3차원 평명 (xyz 평면) -->
+<!-- 2차원 좌표계 :left-top이 0.0 지점  전형적인 스크린 좌표계-->
+<!-- 3차원 좌표계 : 2차원 좌표계 + z축 (모니터 앞으로 z+. 모니터 뒤쪽으로 z-) -->
+<!-- rotate(각도값) : 회전 -->
+<!-- translate(X,Y) : X,Y위치로 이동 -->
+<!-- translateX(X) : X위치로 이동 -->
+<!-- translateY(Y): Y위치로 이동 -->
+<!-- scale(X,Y): 크기를 변경 1은 원본, 2는 2배  -->
+<!-- scale(X): 가로 크기 변경 -->
+<!-- scale(Y): 세로 크기 변경 -->
+<!-- skew(X,Y): 각도값 X,  각도값 Y X축기준, Y축 기준으로 기울이기-->
+<!-- skewX(X) : X축 기준 기울이기 -->
+<!-- skewY(Y) : Y축 기준 기울이기 -->
+
+<!-- transform-origin: 앵커값 회전 기준점 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+      section{
+          width:100px;
+          height:100px;
+          border:5px solid black;
+
+      }
+      div{
+          width:100px;
+          height:100px;
+          background:red;
+          transform:rotate(60deg);
+          /* 오른쪽 아래 모서리를 기준으로 회전 */
+          /* transform-origin: left bottom; */
+          transform-origin:100% 100%;
+          transform-origin:50% 50%;
+          transform-origin:80% 80%;
+        
+          /* transform: rotate(60deg); */
+          /* transform:translate(50px,70px); */
+          /* transform: scale(2,4) translate(50px, 70px); */
+          /* transform: skewX(10deg); */
+
+
+      }
+  </style>
+</head>
+<body>
+    <section>
+        <div></div>
+    </section>
+</body>
+</html>
+
+
+<!-- 3차원 변환 함수 -->
+<!-- transform 함수들 -->
+<!-- translate3d(X,Y,Z) : X,Y,Z 위치로 이동 -->
+<!-- translateX, translateY, translateZ(Z) -->
+<!-- scale3d(X,Y,Z): X,Y,Z 방향의 크기도 변경 -->
+<!-- scaleX, scaleY, scaleZ(Z) -->
+<!-- rotate3d(X,Y,Z) : X축, Y축, Z축 방향으로 회전 -->
+<!-- rotateX, rotateY, rotateZ(Z) -->
+
+
+
+<html lang="en">
+<head>
+    <style>
+        body{
+            width:200px;
+            margin:200px auto;
+
+            /* 원근감 */
+            perspective: 2000;
+
+        }
+        section{
+            width:200px;
+            height:200px;
+            position:relative;
+
+            /* 3D 입체 효과 */
+            transform-style: preserve-3d;
+
+            /* 애니메이션 효과 */
+            animation: myanim 3s linear 0s infinite;
+            
+
+        }
+
+        section:hover{
+            animation-play-state: paused;
+        }
+
+
+        @keyframes myanim{
+
+            from{
+                transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+
+            }
+            to{
+
+                transform:rotateX(360deg) rotateY(30deg) rotateZ(0deg);
+            }
+
+        }
+
+
+        div{
+            width:200px;
+            height:200px;
+            position:absolute;
+            left:0;
+            top:0;
+            opacity: 0.3;
+            /* 뒷면은 안보이게  */
+            backface-visibility: hidden;
+        }
+        /* 옆면 */
+        div:nth-child(1){
+            transform: rotateY(0deg) translate3d(0px,0px,100px);
+            background:red;
+        }
+        div:nth-child(2){
+            transform: rotateY(90deg) translate3d(0px,0px,100px);
+            background:green;
+        }
+        div:nth-child(3){
+            transform: rotateY(180deg) translate3d(0px,0px,100px);
+            background:blue;
+        }
+        div:nth-child(4){
+            transform: rotateY(270deg) translate3d(0px,0px,100px);
+            background:yellow;
+        }
+
+        /* 윗면과 아랫면 */
+    
+        div:nth-child(5){
+            transform: rotateX(90deg) translate3d(0px,0px,100px);
+            background:blue;
+        }
+        div:nth-child(6){
+            transform: rotateX(270deg) translate3d(0px,0px,100px);
+            background:yellow;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 입체 정육면체 도형을 만들자  -->
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+#sec01>div {
+border: 1px solid;
+width: 200px; height: 50px;
+background-color: #eaf;
+}
+
+/* translateX(X) | translateY(Y) | translate(X,Y) */
+.tra01 {
+transform: translateX(800px); /* 가로 오른쪽 800px  */	
+}
+
+.tra02 {
+transform: translateY(300px); /* 수직 아래 300px  */
+}
+
+.tra03 {
+transform: translateX(-50px); /* 가로 왼쪽 50px  */
+}
+
+.tra04 {
+transform: translateY(-300px); /* 수직 위 300px  */
+}
+
+.tra05 {
+transform: translate(800px,-300px); /* 대각선 1시방향 이동 (축없이)ㄴ X,Y값으로 입력 */
+}
+
+.tra06 {
+transform: translate(300px,150px);
+}
+
+
+#sec01:hover>div {
+transform: translate(0,0);
+transition: 2s;
+}
+
+#sec01{position:relative;}
+.center{ /* 부모의 중앙은 맞지만 사각형 11시방향 1px점이 중앙기준  */
+height: 100px !important; 
+position: absolute; /* position 속성의 한계 */
+left: 50%; top: 50%; /* 부모(sec01)에 대한 %  */
+transform: translate(-50%,-50%); 
+/* 자기크기기준 정중앙에 위치함 */ 
+white-space: pre;
+}
+
+
+/* scale() : 크기 변형 */
+/* x방향 축소시 font, img 같이 변형됨  */
+
+#sec02>div, #sec03>div {
+border: 2px solid #305877;/* 테두리  */
+width: 200px;
+display: inline-block; /* 한줄에 나란히 */
+margin: 50px;
+}
+
+#sec02 img, #sec03 img{
+width: 200px; /* img 크기 축소 */
+
+}
+.sca01 {
+transform: scaleX(1.5); /* 가로방향 축소|확대 */
+/*1보다 작으면 축소, 1보다 크면 확대  */
+}
+
+.sca02:hover {
+transform: scaleX(0.3); /* 가로방향 축소  */
+}
+
+.sca03:hover {
+transform: scaleY(2); /* 세로방향 확대  */
+}
+
+.sca04:hover {
+transform: scaleY(0.2); /* 세로방향 축소  */
+}
+
+.sca05:hover {
+transform: scale(2,2);
+}
+
+/* #sec02:hover>.sca06 {
+transform: scale(0.5,0.5);
+} */
+.sca06 {
+border-color: #333 !important;	
+overflow: hidden; /* 영역나가면 삭제  */
+padding: 10px 10px 15px; /* 내부여백 */
+border-radius: 15px;
+font-size: 2em;
+font-family: fantasy;
+text-transform: capitalize;
+}
+
+.sca06>img{
+transform: scale(3,3);
+opacity: 0.3;
+}
+
+.sca06:hover>img{
+transform: scale(1,1);
+transition: 2s; /* 마우스 올렸을 때 천천히 변형  */
+}
+
+/*span 글자 묶어서 효과주기*/
+.sca06>span { /*위치변형*/
+/* transform: translate이 원래 
+성격(inline)일 때는 적용불가이므로 block으로 변경 */
+display: block; 
+transform: translate(-50px,-70px);
+}
+
+.sca06:hover>span { /*.sca06에 마우스 올리면 */
+transform: translate(60px,10px);
+transition: 1.7s;
+}
+
+/*transform: rotate(); 회전변형*/
+.rot01 {transform: rotateX(45deg);} /*가로방향 회전(45도)*/
+.rot02:hover{transform: rotateY(45deg);} /*세로방향 회전(45도)*/
+.rot03:hover{transform: rotateX(-180deg);
+transition: 2s;}
+.rot04:hover{transform: rotateY(180deg);
+transition: 2s;}
+.rot05:hover{transform: rotate(54000000deg);
+transition: 500s;}
+
+/* 안의 그림만 돌기  */
+.rot06{
+	border-color: #333 !important;
+	overflow: hidden;
+}
+.rot06:hover>img {
+	transition: 2s;
+transform: rotate(1080deg);	
+}
+
+
+/* transform: skew(); 기울기 변형  */
+
+/* <기본세팅>
+#sec04>div {
+border: 1px solid #520;
+width: 600px;
+font-size: 3em;
+font-weight: bold;
+font-family: impact;
+letter-spacing: 0.1em;
+text-shadow: 2px 3px 4px #520;
+color: #eed;
+margin: 0.7em;
+} */
+
+#sec04>div, #sec05>div {
+border: 1px solid #520;
+margin: 0.7em;
+width: 650px;
+font-size: 3em;
+font-weight: bold;
+font-family: impact;
+letter-spacing: 0.1em;
+text-shadow: 2px 3px 4px #520;
+color: #eed;
+}
+
+#sec04:hover>.sk01 {
+transform: skewX(20deg);}
+
+#sec04:hover>.sk02 {
+transform: skewX(-20deg);}
+
+#sec04:hover>.sk03 {
+transform: skewY(45deg);	
+}
+
+#sec04:hover>.sk04 {
+transform: skewY(-45deg);
+}
+
+#sec04:hover>.sk05{
+transform: skew(20deg, 20deg);
+transition: 2s;
+}
+
+.sk06 {background-color: #100100;
+box-shadow: 2px 3px 4px #520;
+padding: 15px;}
+
+/* transform-origin:;  */
+.ori01 {transform-origin: 0% 0%;} /*기준점 두기 */
+.ori01:hover {
+transform: scale(0.2,1); /*가로방향 2배 늘게  */
+transition: 2s;
+}
+
+.ori02 {transform-origin: 50% 0%;} /*밑으로 길어짐 50% 100% (위로 길어짐) */ 
+.ori02:hover {
+transform: scale(1,3); /*세로방향 3배 늘게  */
+transition: 2s;
+}
+
+.ori03 {transform-origin: right top;} /*오른쪽 상단 기준 */ 
+.ori03:hover {
+transform: rotate(540deg); /*540도 회전  */
+transition: 2s;
+}
+
+.ori04 {transform-origin: 6em 0.6em;} /*오른쪽 6배 상단*/ 
+.ori04:hover {
+transform: rotate(540deg); /*540도 회전  */
+transition: 2s;
+}
+
+.ori05 {transform-origin: left bottom;} /*왼쪽 아래*/ 
+.ori05:hover {
+transform: skew(540deg); /*달려오는 느낌  */
+transition: 2s;
+}
+
+.ori06 {margin: auto !important;} /*중앙정렬  */ 
+#sec05:hover>.ori06 {
+transform: rotate(54000deg) translateX(800px); /*540도 회전  */
+transition: 100s;
+}
+
+.ori07 {margin: auto !important;} /*중앙정렬  */ 
+#sec05:hover>.ori07 {
+transform: translateX(800px) rotate(54000deg) ; /*540도 회전  */
+transition: 100s;
+}

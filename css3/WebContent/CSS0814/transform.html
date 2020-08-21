@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>transform</title>
-<link href="transform.css" rel="stylesheet">
+<link href="transform2.css" rel="stylesheet">
 <link href="../style.css" rel="stylesheet">
 </head>
 <body>
@@ -11,10 +11,10 @@
 <h1>transform: ; 변형</h1>
 <h2>변형함수</h2>
 <ol> 
- <li>translate() 위치 변형</li>
- <li>scale() 크기 변형</li>
- <li>rotate() 회전 변형</li>
- <li>skew() 기울기 변형</li>
+ <li>translate() 위치 변형 : 단위(%, px, em, ...)</li>
+ <li>scale() 크기 변형 : 1을 기준으로 1보다 작으면 축소, 크면 확대</li>
+ <li>rotate() 회전 변형(각도) : 각도(deg) 단위</li>
+ <li>skew() 기울기 변형(각도) : 각도(deg) 단위</li>
 </ol>
 
 <section id="sec01">
@@ -42,25 +42,83 @@
 <section id="sec02">
  <h3>transform: scale(); 크기 변형</h3>
  <!-- 1이 기준  -->
- <div class="sca01"> 
+ <div class="sca01"> transform: scaleX(1.5); <br>
   <img src="../img/landscape-sky.jpg">
  </div>
- <div class="sca02"> 
+ <div class="sca02"> transform: scaleX(0.3) <br>
   <img src="../img/landscape-sky.jpg">
  </div>
- <div class="sca03"> 
+ <div class="sca03"> transform: scaleY(2); <br>
   <img src="../img/landscape-sky.jpg">
  </div>
- <div class="sca04"> 
+ <div class="sca04"> transform: scaleY(0.2); <br>
   <img src="../img/landscape-sky.jpg">
  </div>
- <div class="sca05"> 
+ <div class="sca05"> transform: scale(2,2); <br>
   <img src="../img/landscape-sky.jpg">
  </div>
- <div class="sca06"> 
+ <div class="sca06"> <span>Green</span> <br>
   <img src="../img/landscape-sky.jpg">
+ </div>
+</section>
+
+<section id="sec03">
+ <h3>rotate() 회전변형</h3>
+ 
+ <div class="rot01">transform: rotate();
+ <br> <img src="../img/grayscale.jpg">
+ </div>
+ 
+ <div class="rot02">transform: rotate();
+ <br> <img src="../img/grayscale.jpg">
+ </div>
+ 
+ <div class="rot03">transform: rotate();
+ <br> <img src="../img/grayscale.jpg">
+ </div>
+ 
+ <div class="rot04">transform: rotate();
+ <br> <img src="../img/grayscale.jpg">
+ </div>
+ 
+ <div class="rot05">transform: rotate();
+ <br> <img src="../img/grayscale.jpg">
+ </div>
+ 
+ <div class="rot06">transform: rotate();
+ <br> <img src="../img/grayscale.jpg">
  </div>
 
+ 
 </section>
+
+<section id="sec04">
+ <h3>transform: skew() 기울기 변형</h3>
+ 
+ <div class="sk01">transform:skew();</div>
+ <div class="sk02">transform:skew();</div>
+ <div class="sk03">transform:skew();</div>
+ <div class="sk04">transform:skew();</div>
+ <div class="sk05">transform:skew();</div>
+ <div class="sk06">transform:skew();</div>
+ 
 </body>
+
+
+<section id="sec05">
+ <h3>transform-origin:; 변형의 기준점 변경</h3>
+ <p> 기준값은 정중앙(가로 세로 순서)<br>
+ 	center center | 50% 50%
+ </p>
+ <div class="ori01">transform-origin: rotateX(45deg)</div>
+ <div class="ori02">transform-origin</div>
+ <div class="ori03">transform-origin</div>
+ <div class="ori04">transform-origin</div>
+ <div class="ori05">transform-origin</div>
+ <div class="ori06">transform-origin</div>
+ <div class="ori07">transform-origin</div>
+ 
+</section>
+
+
 </html>
