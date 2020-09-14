@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="animation.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+
+<title>animation</title>
+</head>
+<body>
+
+<p> 키프레임(의미있는장면)들을 정의해서 디테일한 애니를 만들 수 있다.<br>
+애니메이션을 정의하고 요소에 적용한다.
+</p>
+
+
+<h2>애니메이션을 정의</h2>
+ <p class="pre">
+ @keyframes 애니메이션명 { -------- 애니메이션 이름을 정해줌
+ 	0%(=from) { 속성: 속성명; }---- 첫 장면에서의 상태
+ 	
+ 	...               ------------- 중간 특정 장면에서의 상태
+ 	
+ 	100%(=to) { 속성: 속성명; }---- 끝 장면에서의 상태
+ }
+ </p>
+
+ <h2>애니메이션 활용</h2>
+ <ul id="bg-ch" class="anibg">
+  <li>animation-name:;(필수) 애니메이션 이름</li>
+  <li>animation-duration:;(필수) 전체 진행 시간</li>
+  <li>animation-delay:; 지연 시간</li>
+  <li>animation-iteration-count:; 반복 횟수</li>
+  <li>animation-direction:; 진행 방향)</li>
+  <li>animation-timing-function:; 가속 감속 등</li>
+  <li>animation-fill-mode:; 애니메이션이 멈춰있을 때의 장면</li>
+  <li>animation:; 단축형표현(속성값만 나열)</li>
+ </ul>
+
+
+<section id="sec01">
+ <h2>animation-direction:; 진행 방향)</h2>
+  <ul>
+   <li>normal 정방향(기본)</li>
+   <li>reverse 역방향</li>
+   <li>alternate 왕복</li>
+   <li>alternate-reverse 역방향왕복</li>
+  </ul>
+ 
+  <div class="ani-big normal"> normal </div>
+  <div class="ani-big rever"> reverse </div>
+  <div class="ani-big alter"> alternate </div>
+  <div class="ani-big altrev"> alternate-reverse </div>
+  
+</section>
+
+<section id="sec02">
+ <h2>animation-timing-function:; 가속 감속 등</h2>
+  <ul> 
+    <li>ease 기본값. 시작을 서서히 마지막을 느리게</li>
+    <li>ease-in 시작을 느리게</li>
+    <li>ease-out 마지막을 느리게</li>
+    <li>ease-in-out 시작을 서서히 마지막을 느리게</li>
+    <li>linear 등속</li>
+    <li>cubic-bezier(n,n,n,n) 베지에-곡선값을 이용
+    (cubic-bezier.com)</li>
+          
+  </ul> 
+ 
+  <div class="ani-move ease">ease</div>
+  <div class="ani-move ease-in">ease-in</div>
+  <div class="ani-move ease-out">ease-out</div>
+  <div class="ani-move ease-io">ease-in-out</div>
+  <div class="ani-move linear">linear</div>
+  <div class="ani-move cubic">cubic-bazier</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

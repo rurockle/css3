@@ -1,23 +1,73 @@
 @charset "UTF-8";
 
-/* 
-transition
-transition-delay
-transition-duration
-transition-property
-transition-timing-function */
-
 .trans {
-width: 170px;
-border-radius: 10px;
-}
-
+width: 200px;	
+border-radius: 10px;}
+   
 .trans:hover {
-background-color: #3a8; /*초록색*/
-width: 300px;
+background-color: #3a8;	
+width: 300px;	
 border-radius: 15px;
 font-size: 50px;
-transition: width 2.5s 0.7s ease-out;
-        /* 속성 | 진행시간| 지연시간 | 가속/감속 */
-        /* 지정한 속성만 천천히 늘어남 */
+transition: background-color 2.5s 0.7s ease-out;}
+
+
+ /* transition-timing-function 기본작업 */
+#sec01 {
+background-image: url("../img/beach.jpg");
+/* background-size: contain;기본값 반복 */
+background-size: cover;/*크기에 따라 가변*/}
+
+
+#sec01>div {border: 1px solid;
+ border-right:10px solid;
+ width: 150px; height: 30px;
+ box-sizing: border-box; /*width height의 border와 padding  */
+ margin-bottom: 20px;
+ text-align: center;
+ line-height: 30px;
+ font-weight: bold;
+ color: #add;
+ position: relative;
+ left: 0;
+ 
+ }
+
+#sec01:hover>div {
+	left: 900px;
+	transition: 4s 0.6s;
 }
+
+ /* transition-timing-function */
+#sec01:hover>div.ttf01 {transition-timing-function: ease;}
+#sec01:hover>div.ttf02 {transition-timing-function: ease-in;}
+#sec01:hover>div.ttf03 {transition-timing-function: ease-out;}
+#sec01:hover>div.ttf04 {transition-timing-function: ease-in-out;}
+#sec01:hover>div.ttf05 {transition-timing-function: linear;}
+#sec01:hover>div.ttf06 {transition-timing-function: cubic-bezier(.01,1.53,.75,-0.93);}
+#sec01:hover>div.ttf07 {transition-timing-function: cubic-bezier(1,1.21,.73,-0.34);}
+
+
+
+#sec01:hover {
+background-position: -600px 0; /*오른쪽 -600px 위쪽 0 */
+transition: 6s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

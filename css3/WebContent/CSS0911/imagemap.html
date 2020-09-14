@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Image Maps</title>
+<link href="../style.css" rel="stylesheet">
+</head>
+<body>
+<h1>image map</h1>
+<p>
+이미지 하나에 구역을 나누어 각각 다른 곳으로 링크를 건다.
+이미지에는 이미지맵 선언을 하고 태그로 영역을 설정하고
+태그로 좌표와 모양 등을 설정함.
+</p>
+<p class="pre">&lt;img alt="대체텍스트" src="이미지경로" usemap="#이미지맵 이름&gt;"
+&lt;map name="이미지맵 이름&gt;
+ &lt;area shape="rect" coords="x1,y1,x2,y2" href="링크주소"&gt; -- 좌측 상단점, 우측 하단점
+ &lt;area shape="circle" coords="x1,y1,r" href="링크주소"&gt; -- 중심점, 반지름
+ &lt;area shape="poly" coords="x1,y1,x2,y2,x3,y3,..." href="링크주소"&gt; -- 각 모서리들 점 
+ &lt;/map&gt;  
+</p>
+
+<img alt="" src="../img/jpg/pic_trulli.jpg" usemap="#map01">
+<map name="map01">
+ <area shape="rect" coords="0,0,100,200" href="http://www.naver.com" alt="" title="네이버"> <!--1번기준: x,y 2번기준x,y  -->
+ <area shape="circle" coords="200,200,50" href="http://www.daum.net" alt="" title="다음"> <!--중앙점, 반지름 -->
+ <area shape="poly" coords="300,200,350,150,400,200" href="http://nate.com" alt="" title="네이트">
+</map>
+</body>
+</html>

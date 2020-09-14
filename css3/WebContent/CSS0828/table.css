@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+table {margin-bottom: 2.5em;}
+table, th, td {border: 1px solid;}
+table#ta-l{
+	width: 80%;
+	table-layout: fixed;	
+}
+
+#box01, #box02 {
+	border: 1px solid #700;
+	float: left; /*나란히 배치  */
+	margin-right: 4em; /*글자4개 마진*/
+	padding: 1em;
+} 
+
+table#ts01 {
+/* 	border-color: #00d; 테이블 바깥에 색깔 부여 */
+border-collapse: collapse;  /*바깥 테이블 한줄로  */}
+	
+	
+table#ts02 {
+border-color: #d00;
+border-spacing: 0; /*각 레코드 간격 생김*/
+}	
+	
+	
+/*stripe */
+.clear {clear: both;} /* 양쪽다 clear  */	
+
+.cat01 {
+	border-bottom: 3px solid;
+	margin-bottom: 10px;
+	text-align: right;
+	color: #999;
+	padding-bottom: 8px; 
+}
+
+
+#str-1, #str-2 {float:left;
+margin: 1em 2em;}	
+
+/* tr:nth-of-type(): 몇 번째 tr (2n: 짝수번째) 줄 */
+#str-1 tr:nth-of-type(2n) {
+	background-color: #ccc;
+} 	
+	
+#str-2 tr:nth-child(2n-1) { /* 홀수번째 줄*/
+	background: #ccc;
+}	
+
+/* table hover style */
+/* 마우스 올렸을 때, 배경색이 통째로 바뀜 */
+
+#tab-hover {width: 800px;} /*표를 조금 크게  */
+
+#tab-hover tr:nth-of-type(1) th { /*속성상속이 되지 않아 th를 직접 불러옴*/
+	background-color: #59f;
+	height: 60px;
+	color: #fff;
+	vertical-align: bottom;/*크기다른 거 한 줄로 수직 정렬(윗줄에 정렬)*/
+	text-transform: capitalize; /*첫글자 대문자*/
+	font-size: 1.2em;
+	font-weight: 500 !important;
+} 
+
+#tab-hover tr:nth-of-type(4) td:nth-of-type(2) {
+	color: #04a;
+	background-color: #e40; /*내가 원하는 칸만 속성 변경 가능*/
+}
+
+#tab-hover th:hover {
+	text-align: left; /* 제목칸: 마우스 올리면 왼쪽으로 이동 */
+}
+
+#tab-hover th:nth-of-type(1) {
+	width: 2.5em;
+	border-colr: #04a;
+}
+
+#tab-hover tr:hover {
+	background-color: #59f;
+	color: #333;
+	cursor: pointer; /* pointer 커서를 손모양으로 바꿔줌 */
+}
+	
+
+	

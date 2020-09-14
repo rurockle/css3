@@ -11,23 +11,37 @@
  
  <ul>
   <li> transition:; 함축형 표현 </li>
-  <li> transition-property:; 속성</li>
-  <li> transition-duration:; 전체 진행 시간</li>
-  <li> transition-delay:; 지연 시간</li>
+  <li> transition-property:; 속성(속성명을 적거나 모두 적용은 all)</li>
+  <li> transition-duration:; 전체 진행 시간(필수,단위는 초/밀리초 s/ms)</li>
+  <li> transition-delay:; 지연 시간(단위는 초/밀리초 s/ms)</li>
   <li> transition-timing-function:; 가속 감속 등
-   <ol> <!-- 설명정리, 예제부터 -->
-    <li>ease</li>
-    <li>ease-in</li>
-    <li>ease-out</li>
-    <li>ease-in-out</li>
-    <li>linear</li>
-    <li>cubic-bezier(n,n,n,n)</li>   
+   <ol> 
+    <li>ease 기본값. 시작을 서서히 마지막을 느리게</li>
+    <li>ease-in 시작을 느리게</li>
+    <li>ease-out 마지막을 느리게</li>
+    <li>ease-in-out 시작을 서서히 마지막을 느리게</li>
+    <li>linear 등속</li>
+    <li>cubic-bezier(n,n,n,n) 베지에-곡선값을 이용</li>   
    </ol>  
   </li>   
  </ul>
  
  <a href="https://cubic-bezier.com/" target="_blank">
  cubic-bezier.com: 베지에곡선값 자동생성</a>
+
+
+<section id="sec01">
+ <h2>transition-timing-function:;</h2>
+ <div class="ttf01">ease</div>
+ <div class="ttf02">ease-in</div>
+ <div class="ttf03">ease-out</div>
+ <div class="ttf04">ease-in-out</div>
+ <div class="ttf05">linear</div>
+ <div class="ttf06">cubic-bezier</div>s
+ <div class="ttf07">cubic-bezier</div> 
+
+</section>
+
 
 
 </body>
